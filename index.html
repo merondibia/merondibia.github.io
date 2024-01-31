@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+	<style>
+		/* Set display to none for image*/
+		#image {
+			display: none;
+		}
+	</style>
+</head>
+
 <body>
+	<div>
+		<h1>Termite Mound Temprature and Soil Moisture Level</h1>
+		<h3>Click on the button to see the graph</h3>
+		<!-- Add id to image -->
+		<img id="image"
+			src=
+"All20Jan.png"
+			alt="graph image" />
+	</div>
+	<button type="button" onclick="show()" id="btnID">
+		Show Image
+	</button>
 
-<h1>Termite Mound Data Anaysis and Demo</h1>
-
-<button type="button" onclick="alert('Test Button!')">Display!</button>
-<h2>Soil Temprature and Moisture Levels</h2>
-<img src="All20Jan.png" alt="Graph Not Available" />
- 
+	<script>
+		function show() {
+			/* Access image by id and change 
+			the display property to block*/
+			document.getElementById('image')
+				.style.display = "block";
+			document.getElementById('btnID')
+				.style.display = "none";
+		}
+	</script>
 </body>
+
 </html>
